@@ -5,10 +5,14 @@ function buildButton() {
         let ch = String.fromCharCode(i)
         newButton.type = "button";
         newButton.value = ch;
+        newButton.className = "buttons";
         newButton.onclick = buttonPress(ch,newButton);
-        document.body.appendChild(newButton);
+        document.getElementById("container").appendChild(newButton);
+        
     }
 }
+
+
 
 function buttonPress(letter,button) {
     return function () {
@@ -34,4 +38,6 @@ function checkLetter(letter){
 function goodGuess(){
     
 }
+
 buildButton();
+
