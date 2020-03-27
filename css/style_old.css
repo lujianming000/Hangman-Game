@@ -4,8 +4,8 @@ h1 {
     text-shadow:0.025em 0.025em red;
 }
 #container{
-    display: flex;
-    justify-content: space-around;
+    display: absolute;
+    justify-content: center;
 }
 
 .buttons {

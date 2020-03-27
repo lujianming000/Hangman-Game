@@ -1,0 +1,21 @@
+FROM JASON:
+
+I worked on button.js, word.js, and gamelogic.js. Please take a look through that.
+Also take a look through style.css/.buttons and word.js/getRandomWord() to see they were scaled to fit browser.
+When we're working on the other stuff elements, I want to retain the same methods for scaling fonts, buttons, and pictures.
+
+
+The mechanics of the game should be working now, there isn't that much left to do:
+
+    1. finish gamelogic.js (look for // TODOs)
+       - updateHangman()  -> I already made a switch case based on lives (D2L says to have 7 lives)
+                          -> update src for the hangman img HTML element
+       - calculateScore() -> I was thinking some kind of setInterval function where score decreases
+                          -> at the end of the game, lives should somehow add back to the score
+       - gameOver()       -> some kind of game over screen (and maybe play again?)
+                          -> see final score and see correct word
+       - win()            -> some kind of win screen (and maybe play again?)
+                          -> leaderboards
+
+    2. add some kind of leaderboards (firebase?)
+       - i'll let you guys think about that

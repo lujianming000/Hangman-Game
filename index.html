@@ -4,12 +4,31 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>WIP Web Final</title>
-        <link rel="stylesheet" href="style.css">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/style.css">
     </head>
 
     <body>
-        <h1>Hi There</h1>
-        <div id="container"></div>
-        <script src="js/script.js"></script>
+        <!-- HTML -->
+        <h2 id="lives"></h2>
+        <img id="hangman" alt="Hang Man" src="src/placeholder.png"> <!-- TODO -->
+        <div id="container">
+            <div id="containerWord">
+                <h1 id="word"></h1>
+            </div>
+            <div id="containerAlphabet"></div>
+        </div>
+
     </body>
+
+    <!-- JAVASCRIPT -->
+    <script src="js/button.js"></script>
+    <script src="js/word.js"></script>
+        <!-- Note: ALWAYS LEAVE gamelogic.js AT BOTTOM-MOST LINE! 
+          --       gamelogic.js depends on scripts from button.js
+          --       and word.js, so gamelogic.js cannot be read
+          --       until the other files are read.                -->
+    <script src="js/gamelogic.js"></script>
+
 </html>
