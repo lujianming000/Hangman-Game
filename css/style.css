@@ -2,7 +2,7 @@
 h2 {
 	text-align: center;
 	font-family: Arial;
-	font-size: 2em;
+	font-size: max(4vh, 2em, 2rem);
 	text-shadow: 0.045em 0.045em #AAAAAA;
 }
 
@@ -11,7 +11,8 @@ h1 {
 	text-align:center;
 	font-family: Arial;
 	text-shadow:0.025em 0.025em red;
-	margin-bottom: max(5vw, 5vh, 30px);
+	margin-bottom: max(4vw, 4vh, 30px);
+	/* font-size will change based on length of word -> word.js/getRandomWord() */
 }
 
 /** Hangman Image. */
@@ -24,16 +25,20 @@ h1 {
 /** div container to hold word and letters. */
 #container {
 	position: absolute;
-	bottom: max(5vw, 5vh, 30px);
+	bottom: max(4vw, 4vh, 30px);
 }
 
 /** div container for word. */
 #containerWord {
+	width: 75%;
+	margin: auto;
 	position: relative;
 }
 
 /** div container for alphabet letters. */
 #containerAlphabet{
+	width: 90%;
+	margin: auto;
 	position: relative;
     display: flex;
 	flex-flow: row wrap;
@@ -44,12 +49,12 @@ h1 {
 
 /** Alphabet letter buttons. */
 .buttons {
-	width: 9vw;
-	height: 5vh;
-	margin: 0.3vw 0.3vh;
+	width: max(8.2vw, 40px);
+	height: max(8.2vh, 40px);
+	margin: 0.4vh 0.4vw;
 	box-shadow: inset 0px 1px 0px 0px #97c4fe;
 	background: linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
-	border-radius: max(0.7vw, 0.7vh, 6px);
+	border-radius: max(0.8vw, 0.8vh, 8px);
 	border: 1px solid #337fed;
 	color:#ffffff;
 	font-family: Arial;
