@@ -48,28 +48,27 @@ function updateHangman() {
     //TODO
     switch (lives) {
         case 7:
-            console.log("pic: 7");
+            document.getElementById("hangman").src = "img/pic1.png";
             break;
         case 6:
-            console.log("pic: 6");
+            document.getElementById("hangman").src = "img/pic2.png";
             break;
         case 5:
-            console.log("pic: 5");
+            document.getElementById("hangman").src = "img/pic3.png";
             break;
         case 4:
-            console.log("pic: 4");
+            document.getElementById("hangman").src = "img/pic4.png";
             break;
         case 3:
-            console.log("pic: 3");
+            document.getElementById("hangman").src = "img/pic5.png";
             break;
         case 2:
-            console.log("pic: 2");
+            document.getElementById("hangman").src = "img/pic6.png";
             break;
         case 1:
-            console.log("pic: 1");
+            document.getElementById("hangman").src = "img/pic7.png";
             break;
         default:
-            console.log("pic: 0");
             gameOver();
             break;
     }
