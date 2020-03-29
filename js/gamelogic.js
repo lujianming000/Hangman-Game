@@ -3,10 +3,10 @@ let livesElement = document.getElementById("lives");
 
 // variable declarations
 let lives = 7;
-let score = 100000;
 let word;
 let button;
 let endpic = document.createElement("img");
+let score = 0;
 
 
 /**
@@ -30,9 +30,11 @@ function createButtons() {
 
 function createGameState() {
     livesElement.innerHTML = "Lives: " + lives;
-    calculateScore();
 }
 
+function scoreadd(){
+    score++;
+}
 
 function makeGuess(letter) {
     word.checkGuess(letter);
@@ -74,9 +76,12 @@ function updateHangman() {
     }
 }
 
-function calculateScore() {
-    //TODO
-    console.log("score:");
+function showScore() {
+    let showscore = document.createElement("p");
+    showscore.id = "score";
+    showscore.innerHTML = "Your score is: " + score;
+    document.getElementById("scorediv").appendChild(showscore);
+    document.getElementById("scorediv").style.visibility="visible";
 }
 
 function win() {
@@ -85,8 +90,7 @@ function win() {
     document.body.appendChild(endpic);
     hideworddiv();
     restartbutton();
-    
-
+    showScore();
 }
 
 function gameOver() {
@@ -95,7 +99,7 @@ function gameOver() {
     document.body.appendChild(endpic);
     hideworddiv();
     restartbutton();
-    
+    showScore(); 
 }
 
 function hideworddiv(){

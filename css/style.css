@@ -103,3 +103,21 @@ h1 {
 	font-family: Arial, Helvetica, sans-serif;
 	visibility: visible;
 }
+
+#score {
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 2em;
+	margin: auto;
+}
+
+#scorediv {
+	display: flex;
+	width: 50%;
+	height: 10%;
+	top: 70%;
+	position: fixed;
+	left: 25%;
+	visibility: hidden;
+
+}

@@ -14,6 +14,7 @@ let words = [
 ];
 let wordIndex;
 
+
 /**
  * Creates the guessable word.
  */
@@ -62,6 +63,7 @@ function WordToFind() {
             badGuess(); // -> gamelogic.js
         } else {
             // correct guess
+            scoreadd();
             for (let index = 0; index < this.word.size; index++) {
                 if (letter == this.word.answer.charAt(index)) {
                     this.fillBlank(index, letter);
