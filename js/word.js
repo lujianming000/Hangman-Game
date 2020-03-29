@@ -3,7 +3,6 @@ let container = document.getElementById("word");
 
 // variable declarations
 let words = [
-    "COMMITTEE",
     "HELLO",
     "WORLD",
     "JIMMY",
@@ -12,7 +11,6 @@ let words = [
     "JAEDON",
     "COVID",
     "SAD",
-    "UNFORTUNATE"
 ];
 let wordIndex;
 

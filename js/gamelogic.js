@@ -6,6 +6,8 @@ let lives = 7;
 let score = 100000;
 let word;
 let button;
+let endpic = document.createElement("img");
+
 
 /**
  * create the guessable word.
@@ -44,7 +46,7 @@ function badGuess() {
 
 function updateHangman() {
     //TODO
-    switch(lives) {
+    switch (lives) {
         case 7:
             console.log("pic: 7");
             break;
@@ -79,17 +81,45 @@ function calculateScore() {
 }
 
 function win() {
-    //TODO
-    console.log("win");
+    endpic.src = "img/congra.jpg";
+    endpic.id = "endpic";
+    document.body.appendChild(endpic);
+    hideworddiv();
+    restartbutton();
+    
+
 }
 
 function gameOver() {
-    //TODO
-    console.log("game over");
+    endpic.src = "img/gameover.jpg";
+    endpic.id = "endpic";
+    document.body.appendChild(endpic);
+    hideworddiv();
+    restartbutton();
+    
 }
+
+function hideworddiv(){
+    document.getElementById('wrapper').style.display = "none";
+}
+
+function restart() {
+   
+}
+
+function restartbutton(){
+    let rebutton = document.createElement("button");
+    rebutton.id = "rebutton";
+    rebutton.innerHTML = "Play Again";
+    document.body.appendChild(rebutton);
+    rebutton.onclick = restart;
+}
+
+
 
 // invoke
 createWord();
 createButtons();
 createGameState();
 updateHangman();
+

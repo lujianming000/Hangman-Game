@@ -8,9 +8,9 @@ h2 {
 
 /** Word Label. */
 h1 {
-	text-align:center;
+	text-align: center;
 	font-family: Arial;
-	text-shadow:0.025em 0.025em red;
+	text-shadow: 0.025em 0.025em red;
 	margin-bottom: max(4vw, 4vh, 30px);
 	/* font-size will change based on length of word -> word.js/getRandomWord() */
 }
@@ -36,11 +36,11 @@ h1 {
 }
 
 /** div container for alphabet letters. */
-#containerAlphabet{
+#containerAlphabet {
 	width: 90%;
 	margin: auto;
 	position: relative;
-    display: flex;
+	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
 	align-content: center;
@@ -56,11 +56,11 @@ h1 {
 	background: linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
 	border-radius: max(0.8vw, 0.8vh, 8px);
 	border: 1px solid #337fed;
-	color:#ffffff;
+	color: #ffffff;
 	font-family: Arial;
 	font-size: 1.3em;
 	font-weight: bold;
-	text-shadow:0px 1px 0px #1570cd;
+	text-shadow: 0px 1px 0px #1570cd;
 	cursor: pointer;
 }
 
@@ -73,7 +73,33 @@ h1 {
 .buttons:disabled {
 	box-shadow: inset 0px 1px 0px 0px #DDDDDD;
 	background: #CCCCCC;
-	border:1px solid #AAAAAA;
+	border: 1px solid #AAAAAA;
 	text-shadow: 0px 1px 0px #999999;
 	cursor: not-allowed;
+}
+
+#endpic {
+	width: 90vw;
+	height: 60vh;
+	top: 2vh;
+	left: 5vw;
+	position: fixed;
+	z-index: +1;
+}
+
+#rebutton {
+	width: 10vw;
+	height: 5vh;
+	top: 80vh;
+	left: 45vw;
+	padding: 10px 16px;
+	border-radius: 35px;
+	font-size: 12px;
+	text-align: center;
+	position: fixed;
+	background-color: #ED553B;
+	border-color: #ED552A;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	visibility: visible;
 }
