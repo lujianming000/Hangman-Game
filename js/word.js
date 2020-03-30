@@ -11,6 +11,8 @@ let words = [
     "JAEDON",
     "COVID",
     "SAD",
+    "APPLE",
+    "BANANA",
 ];
 let wordIndex;
 
@@ -63,6 +65,8 @@ function WordToFind() {
             badGuess(); // -> gamelogic.js
         } else {
             // correct guess
+            coin.load();
+            coin.play();
             for (let index = 0; index < this.word.size; index++) {
                 if (letter == this.word.answer.charAt(index)) {
                     addScore(); // -> gamelogic.js
