@@ -84,15 +84,13 @@ function showScore() {
  * play SFX for correct guess.
  */
 function correctSFX() {
-    coin.load();
     coin.play();
 }
 
 /**
  * play SFX for incorrect guess.
  */
-function incorrectSFX() {
-    dead.load();
+function incorrectSFX() { 
     dead.play();
 }
 

@@ -28,3 +28,12 @@ What to do next
 1. css Mobile friendy design (required)
       (NOTE FROM JASON: I had already made word, keyboard and lives label mobile friendly)
 2. leaderboards (bonus)
+
+
+
+From JIMMY:
+
+Mobile friendly design has been done!
+
+What to do next
+leaderboards (bonus)
