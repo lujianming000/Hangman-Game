@@ -19,3 +19,11 @@ The mechanics of the game should be working now, there isn't that much left to d
 
     2. add some kind of leaderboards (firebase?)
        - i'll let you guys think about that
+
+From JIMMY:
+
+ALL The stuff JASON mentioned have has done except the database (leaderboards).
+
+What to do next
+1. css Mobile friendy design (required)
+2. leaderboards (bonus)

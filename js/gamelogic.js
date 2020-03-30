@@ -7,6 +7,8 @@ let button;
 let score = 0;
 let rebutton = document.getElementById("rebutton");
 let showscore = document.getElementById("score");
+let coin = document.getElementById("coin");
+let dead = document.getElementById("dead");
 /**
  * create the guessable word.
  */
@@ -42,6 +44,8 @@ function makeGuess(letter) {
 function badGuess() {
     lives -= 1;
     score -= 1;
+    dead.load();
+    dead.play();
     livesElement.innerHTML = "Lives: " + lives;
     updateHangman();
 }
