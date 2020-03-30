@@ -38,7 +38,7 @@ function WordToFind() {
         wordIndex = Math.floor(Math.random() * words.length);
         this.word.answer = words[wordIndex];
         this.word.size = words[wordIndex].length;
-        let fontSize = 75 / this.word.size; // 75: style.width from <div id="containerWord">
+        let fontSize = 50 / this.word.size; // 50: style.width from <div id="containerWord">
         this.word.style.fontSize = fontSize + "vw";
     }
 

@@ -1,19 +1,21 @@
+/** div container to hold game-state elements. */
+#wrapper {
+	position: absolute;
+	bottom: max(4vw, 4vh, 30px);
+}
+
 /** Lives label. */
 h2 {
 	text-align: center;
 	font-family: Arial;
 	font-size: max(4vh, 2em, 2rem);
 	text-shadow: 0.045em 0.045em #AAAAAA;
-	z-index: +2;
 }
 
-/** Word Label. */
-h1 {
-	text-align: center;
-	font-family: Arial;
-	text-shadow: 0.025em 0.025em red;
-	margin-bottom: max(4vw, 4vh, 30px);
-	/* font-size will change based on length of word -> word.js/getRandomWord() */
+#containerHangman {
+	width: 75%;
+	margin: auto;
+	position: relative;
 }
 
 /** Hangman Image. */
@@ -21,19 +23,24 @@ h1 {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-}
-
-/** div container to hold word and letters. */
-#container {
-	position: absolute;
-	bottom: max(4vw, 4vh, 30px);
+	height: 40vmin;
 }
 
 /** div container for word. */
 #containerWord {
-	width: 75%;
+	width: 50%;
 	margin: auto;
 	position: relative;
+}
+
+/** Word Label. */
+h1 {
+	text-align: center;
+	font-family: Arial;
+	text-shadow: 0.025em 0.025em red;
+	margin-top: 0px;
+	margin-bottom: max(4vw, 4vh, 30px);
+	/* font-size will change based on length of word -> word.js/getRandomWord() */
 }
 
 /** div container for alphabet letters. */
@@ -50,8 +57,8 @@ h1 {
 
 /** Alphabet letter buttons. */
 .buttons {
-	width: max(8.2vw, 40px);
-	height: max(8.2vh, 40px);
+	width: max(8.6vw, 28px);
+	height: max(6vh, 38px);
 	margin: 0.4vh 0.4vw;
 	box-shadow: inset 0px 1px 0px 0px #97c4fe;
 	background: linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
@@ -79,6 +86,11 @@ h1 {
 	cursor: not-allowed;
 }
 
+/** div container for endscreen. */
+#endscreen {
+	visibility: hidden;
+}
+
 /** Endscreen picture - win or lose screen. */
 #endpic {
 	width: 90vw;
@@ -88,6 +100,26 @@ h1 {
 	position: fixed;
 	z-index: +1;
 
+}
+
+/** div container for final score label. */
+#scorediv {
+	display: flex;
+	width: 50%;
+	height: 10%;
+	top: 70%;
+	position: fixed;
+	left: 25%;
+	display: flex;
+	justify-content: center;
+}
+
+/** final score label. */
+#score {
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 1em;
+	margin: auto;
 }
 
 /** Restart button. */
@@ -103,35 +135,4 @@ h1 {
 	border-color: #ED552A;
 	color: white;
 	font-family: Arial, Helvetica, sans-serif;
-
-}
-
-/** final score label. */
-#score {
-	font-family: Arial;
-	font-weight: bold;
-	font-size: 1em;
-	margin: auto;
-}
-
-/** div container for final score label. */
-#scorediv {
-	display: flex;
-	width: 50%;
-	height: 10%;
-	top: 70%;
-	position: fixed;
-	left: 25%;
-	display: flex;
-	justify-content: center;
-
-}
-
-/** div container for endscreen. */
-#endscreen {
-	visibility: hidden;
-}
-
-#hangman {
-	width: 80vmin;
 }
