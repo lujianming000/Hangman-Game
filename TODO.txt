@@ -26,4 +26,5 @@ ALL The stuff JASON mentioned have has done except the database (leaderboards).
 
 What to do next
 1. css Mobile friendy design (required)
+      (NOTE FROM JASON: I had already made word, keyboard and lives label mobile friendly)
 2. leaderboards (bonus)

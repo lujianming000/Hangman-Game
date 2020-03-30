@@ -1,19 +1,24 @@
 // HTML short-hand declaration
-
-let livesElement = document.getElementById("lives");
-let rebutton = document.getElementById("rebutton");
-let showscore = document.getElementById("score");
+let scoreLabel = document.getElementById("lives");
+let finalScoreLabel = document.getElementById("score");
+let hangman = document.getElementById("hangman");
+let containerAlphabet = document.getElementById("containerAlphabet");
+let wrapperGame = document.getElementById("wrapper");
+let wrapperEnd = document.getElementById("endscreen");
+let endpic = document.getElementById("endpic");
+let restartButton = document.getElementById("rebutton");
 let coin = document.getElementById("coin");
 let dead = document.getElementById("dead");
+
+// constants
+const TAB = "&nbsp;&nbsp;&nbsp;&nbsp;"
 
 // variables
 let word;
-let button;
+let alphabet;
 let lives = 7;
 let score = 0;
 
-let coin = document.getElementById("coin");
-let dead = document.getElementById("dead");
 /**
  * create the guessable word.
  */
@@ -26,62 +31,113 @@ function createWord() {
  * create all the alphabet buttons.
  */
 function createButtons() {
+    // when game is reset - make sure container is empty
+    containerAlphabet.innerHTML = ""
+
     // ASCII A = 65, Z = 90
     for (let i = 65; i <= 90; i++) {
         let ch = String.fromCharCode(i);
-        button = new Button(ch);
+        alphabet = new Button(ch);
     }
 }
 
+/**
+ * initialize (or reset) game screen.
+ */
 function createGameState() {
-    livesElement.innerHTML = "Lives: " + lives;
+    lives = 7;
+    score = 0;
+    showScore();
+    updateHangman();
+
+    createWord();
+    createButtons();
 }
 
+/**
+ * increment score.
+ */
 function addScore() {
     score++;
+    showScore();
+    correctSFX();
 }
 
-function updateScore() {
-    score += x
-
+/**
+ * decrement score.
+ */
+function minusScore() {
+    score--;
+    lives--;
+    showScore();
+    incorrectSFX();
 }
 
+/**
+ * update html for score label.
+ */
+function showScore() {
+    scoreLabel.innerHTML = "Lives: " + lives + TAB + "Score: " + score;
+}
+
+/**
+ * play SFX for correct guess.
+ */
+function correctSFX() {
+    coin.load();
+    coin.play();
+}
+
+/**
+ * play SFX for incorrect guess.
+ */
+function incorrectSFX() {
+    dead.load();
+    dead.play();
+}
+
+/**
+ * check if letter is a correct guess.
+ * @param {String} letter   to check
+ */
 function makeGuess(letter) {
     word.checkGuess(letter);
 }
 
+/**
+ * decrement score and update hangman sprite.
+ */
 function badGuess() {
-    lives -= 1;
-    score -= 1;
-    dead.load();
-    dead.play();
-    livesElement.innerHTML = "Lives: " + lives;
+    minusScore();
     updateHangman();
 }
 
+/**
+ * update hangman sprite.
+ */
 function updateHangman() {
     //TODO
     switch (lives) {
         case 7:
-            document.getElementById("hangman").src = "img/pic1.png";
+            hangman.src = "img/pic7.png";
             break;
         case 6:
-            document.getElementById("hangman").src = "img/pic2.png";
+            hangman.src = "img/pic6.png";
             break;
         case 5:
-            document.getElementById("hangman").src = "img/pic3.png";
+            hangman.src = "img/pic5.png";
             break;
         case 4:
-            document.getElementById("hangman").src = "img/pic4.png";
+            hangman.src = "img/pic4.png";
             break;
         case 3:
-            document.getElementById("hangman").src = "img/pic5.png";
+            hangman.src = "img/pic3.png";
             break;
         case 2:
-            document.getElementById("hangman").src = "img/pic6.png";
+            hangman.src = "img/pic2.png";
             break;
         case 1:
-            document.getElementById("hangman").src = "img/pic7.png";
+            hangman.src = "img/pic1.png";
             break;
         default:
             gameOver();
@@ -89,47 +145,36 @@ function updateHangman() {
     }
 }
 
-function showScore() {
-    showscore.innerHTML = "Your score is: " + score;
-}
-
+/**
+ * show win screeen.
+ */
 function win() {
     endpic.src = "img/congra.jpg";
-    document.getElementById('wrapper').style.visibility = "hidden";
-    document.getElementById('endscreen').style.visibility = "visible";
-    restartbutton();
-    showScore();
+    finalScoreLabel.innerHTML = "Your score is: " + score;
+    wrapperGame.style.visibility = "hidden";
+    wrapperEnd.style.visibility = "visible";
+    restartButton.onclick = restart;
 }
 
+/**
+ * show lose screen.
+ */
 function gameOver() {
     endpic.src = "img/gameover.jpg";
-    document.getElementById('wrapper').style.visibility = "hidden";
-    document.getElementById('endscreen').style.visibility = "visible";
-    restartbutton();
-    showScore();
+    finalScoreLabel.innerHTML = "Your score is: " + score;
+    wrapperGame.style.visibility = "hidden";
+    wrapperEnd.style.visibility = "visible";
+    restartButton.onclick = restart;
 }
 
-
+/**
+ * reset the game.
+ */
 function restart() {
-    score = 0;
-    lives = 7;
-    document.getElementById("containerAlphabet").innerHTML = "";
-    createWord();
-    createButtons();
     createGameState();
-    updateHangman();
-    document.getElementById('wrapper').style.visibility = "visible";
-    document.getElementById('endscreen').style.visibility = "hidden";
+    wrapperGame.style.visibility = "visible";
+    wrapperEnd.style.visibility = "hidden";
 }
-
-function restartbutton() {
-    rebutton.onclick = restart;
-}
-
-
 
 // invoke
-createWord();
-createButtons();
 createGameState();
-updateHangman();

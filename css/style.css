@@ -4,6 +4,7 @@ h2 {
 	font-family: Arial;
 	font-size: max(4vh, 2em, 2rem);
 	text-shadow: 0.045em 0.045em #AAAAAA;
+	z-index: +2;
 }
 
 /** Word Label. */
@@ -78,6 +79,7 @@ h1 {
 	cursor: not-allowed;
 }
 
+/** Endscreen picture - win or lose screen. */
 #endpic {
 	width: 90vw;
 	height: 70vh;
@@ -88,6 +90,7 @@ h1 {
 	
 }
 
+/** Restart button. */
 #rebutton {
 	width: 10vw;
 	height: 5vh;
@@ -105,6 +108,7 @@ h1 {
 	
 }
 
+/** final score label. */
 #score {
 	font-family: Arial;
 	font-weight: bold;
@@ -112,6 +116,7 @@ h1 {
 	margin: auto;
 }
 
+/** div container for final score label. */
 #scorediv {
 	display: flex;
 	width: 50%;
@@ -123,6 +128,7 @@ h1 {
 
 }
 
+/** div container for endscreen. */
 #endscreen{
 	visibility: hidden;
 }

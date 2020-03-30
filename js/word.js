@@ -58,6 +58,7 @@ function WordToFind() {
 
     /**
      * checks if letter is in the answer.
+     * @param {String} letter   to check
      */
     this.checkGuess = function (letter) {
         // incorrect guess
@@ -65,8 +66,8 @@ function WordToFind() {
             badGuess(); // -> gamelogic.js
         } else {
             // correct guess
-            coin.load();
-            coin.play();
+            // coin.load();
+            // coin.play();
             for (let index = 0; index < this.word.size; index++) {
                 if (letter == this.word.answer.charAt(index)) {
                     addScore(); // -> gamelogic.js
