@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>WIP Web Final</title>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WIP Web Final</title>
 
     <!------------------------>
     <!--      CSS Style     -->
     <!------------------------>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-    <body>
+<body>
     <!----------------------->
     <!--    HTML Section   -->
     <!----------------------->
@@ -25,19 +26,24 @@
             <div id="containerAlphabet"></div>
         </div>
     </div>
-    <div id="scorediv"></div>
+    <div id="endscreen">
+        <img id="endpic">
+        <div id="scorediv">
+            <p id="score"></p>
+        </div>
+        <button id="rebutton">Play Again</button>
+    </div>
+</body>
 
-    </body>
-
-    <!----------------------->
-    <!--      JS FILES     -->
-    <!----------------------->
-    <script src="js/button.js"></script>
-    <script src="js/word.js"></script>
-        <!-- Note: ALWAYS LEAVE gamelogic.js AT BOTTOM-MOST LINE! 
+<!----------------------->
+<!--      JS FILES     -->
+<!----------------------->
+<script src="js/button.js"></script>
+<script src="js/word.js"></script>
+<!-- Note: ALWAYS LEAVE gamelogic.js AT BOTTOM-MOST LINE! 
           --       gamelogic.js depends on scripts from button.js
           --       and word.js, so gamelogic.js cannot be read
           --       until the other files are read.                -->
-    <script src="js/gamelogic.js"></script>
+<script src="js/gamelogic.js"></script>
 
 </html>

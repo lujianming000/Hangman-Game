@@ -85,6 +85,7 @@ h1 {
 	left: 5vw;
 	position: fixed;
 	z-index: +1;
+	
 }
 
 #rebutton {
@@ -101,7 +102,7 @@ h1 {
 	border-color: #ED552A;
 	color: white;
 	font-family: Arial, Helvetica, sans-serif;
-	visibility: visible;
+	
 }
 
 #score {
@@ -118,6 +119,10 @@ h1 {
 	top: 70%;
 	position: fixed;
 	left: 25%;
-	visibility: hidden;
+	
 
+}
+
+#endscreen{
+	visibility: hidden;
 }

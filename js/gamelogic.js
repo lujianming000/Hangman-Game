@@ -1,18 +1,17 @@
 // HTML short-hand declaration
-let livesElement = document.getElementById("lives");
 
-// variable declarations
+let livesElement = document.getElementById("lives");
 let lives = 7;
 let word;
 let button;
-let endpic = document.createElement("img");
 let score = 0;
-
-
+let rebutton = document.getElementById("rebutton");
+let showscore = document.getElementById("score");
 /**
  * create the guessable word.
  */
 function createWord() {
+
     word = new WordToFind();
     word.init();
 }
@@ -32,7 +31,7 @@ function createGameState() {
     livesElement.innerHTML = "Lives: " + lives;
 }
 
-function scoreadd(){
+function scoreadd() {
     score++;
 }
 
@@ -77,44 +76,39 @@ function updateHangman() {
 }
 
 function showScore() {
-    let showscore = document.createElement("p");
-    showscore.id = "score";
     showscore.innerHTML = "Your score is: " + score;
-    document.getElementById("scorediv").appendChild(showscore);
-    document.getElementById("scorediv").style.visibility="visible";
 }
 
 function win() {
     endpic.src = "img/congra.jpg";
-    endpic.id = "endpic";
-    document.body.appendChild(endpic);
-    hideworddiv();
+    document.getElementById('wrapper').style.visibility = "hidden";
+    document.getElementById('endscreen').style.visibility = "visible";
     restartbutton();
     showScore();
 }
 
 function gameOver() {
     endpic.src = "img/gameover.jpg";
-    endpic.id = "endpic";
-    document.body.appendChild(endpic);
-    hideworddiv();
+    document.getElementById('wrapper').style.visibility = "hidden";
+    document.getElementById('endscreen').style.visibility = "visible";
     restartbutton();
-    showScore(); 
+    showScore();
 }
 
-function hideworddiv(){
-    document.getElementById('wrapper').style.display = "none";
-}
 
 function restart() {
-   
+    score = 0;
+    lives = 7;
+    document.getElementById("containerAlphabet").innerHTML = "";
+    createWord();
+    createButtons();
+    createGameState();
+    updateHangman();
+    document.getElementById('wrapper').style.visibility = "visible";
+    document.getElementById('endscreen').style.visibility = "hidden";
 }
 
-function restartbutton(){
-    let rebutton = document.createElement("button");
-    rebutton.id = "rebutton";
-    rebutton.innerHTML = "Play Again";
-    document.body.appendChild(rebutton);
+function restartbutton() {
     rebutton.onclick = restart;
 }
 
@@ -125,4 +119,3 @@ createWord();
 createButtons();
 createGameState();
 updateHangman();
-
