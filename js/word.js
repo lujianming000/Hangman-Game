@@ -24,7 +24,7 @@ function WordToFind() {
     this.word.size = 0; // will init
     this.word.innerHTML = ""; // will init
 
-    this.init = function() {
+    this.init = function () {
         this.getRandomWord();
         this.createQuestion();
     }
@@ -63,10 +63,10 @@ function WordToFind() {
             badGuess(); // -> gamelogic.js
         } else {
             // correct guess
-            scoreadd();
             for (let index = 0; index < this.word.size; index++) {
                 if (letter == this.word.answer.charAt(index)) {
                     this.fillBlank(index, letter);
+                    scoreadd();
                 }
             }
 

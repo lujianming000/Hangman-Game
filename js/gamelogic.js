@@ -41,6 +41,7 @@ function makeGuess(letter) {
 
 function badGuess() {
     lives -= 1;
+    score -= 1;
     livesElement.innerHTML = "Lives: " + lives;
     updateHangman();
 }
