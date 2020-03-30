@@ -65,8 +65,8 @@ function WordToFind() {
             // correct guess
             for (let index = 0; index < this.word.size; index++) {
                 if (letter == this.word.answer.charAt(index)) {
+                    addScore(); // -> gamelogic.js
                     this.fillBlank(index, letter);
-                    scoreadd();
                 }
             }
 

@@ -1,17 +1,19 @@
 // HTML short-hand declaration
 
 let livesElement = document.getElementById("lives");
-let lives = 7;
-let word;
-let button;
-let score = 0;
 let rebutton = document.getElementById("rebutton");
 let showscore = document.getElementById("score");
+
+// variables
+let word;
+let button;
+let lives = 7;
+let score = 0;
+
 /**
  * create the guessable word.
  */
 function createWord() {
-
     word = new WordToFind();
     word.init();
 }
@@ -31,8 +33,13 @@ function createGameState() {
     livesElement.innerHTML = "Lives: " + lives;
 }
 
-function scoreadd() {
+function addScore() {
     score++;
+}
+
+function updateScore() {
+    score += x
+
 }
 
 function makeGuess(letter) {
