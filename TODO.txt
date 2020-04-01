@@ -38,3 +38,9 @@ What to do next:
    a wide screen (like in desktop) cuts off the lives element because the hangman is too big? lives element just goes off screen
  - host and hand in project
 
+From JAEDON:
+Made the page more mobile-friendly with media queries (I think Amir's going over them in the next lecture)
+
+What to do next:
+- Add styling to leaderboards.
+

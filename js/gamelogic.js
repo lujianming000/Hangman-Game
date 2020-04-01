@@ -185,12 +185,29 @@ function restart() {
  */
 function showLeaderboard(){
     scoresubmitted = false;
-    wrapperEnd.style.visibility = "hidden";
+    wrapperEnd.style.display = "none";
     wrapperLeaderBoards.style.visibility = "visible";
     document.getElementById("submitscore").onclick = submitScore;
 
     //restartButton.onclick = restart;
 }
 
+/**
+ * Resizes the word based on screen size.
+ */
+function wordResize() {
+    let fontSizeBase = 75;
+
+    let screenWidthMultiplier = 1;
+    if (window.innerWidth >= 1200){
+        screenWidthMultiplier = 0.5;
+    } else if (window.innerWidth >= 768) {
+        screenWidthMultiplier = 0.75;
+    }
+    let fontSize = (fontSizeBase * screenWidthMultiplier) / word.word.size;
+    word.word.style.fontSize = fontSize + "vw";
+}
+
 // invoke
 createGameState();
+window.onresize = wordResize;
