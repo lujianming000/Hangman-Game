@@ -29,11 +29,16 @@ What to do next
       (NOTE FROM JASON: I had already made word, keyboard and lives label mobile friendly)
 2. leaderboards (bonus)
 
-
-
 From JIMMY:
-
 Mobile friendly design has been done!
 
-What to do next
-leaderboards (bonus)
+FROM SAM:
+finished leaderboards
+
+
+What to do next:
+ - Add styling to leaderboards, 
+      make sure 'play again' and 'view leaderboards' button scales to the size of the screen (text looks pretty small right now)
+ - gamestate elements (lives and hangman) are wrapped weirdly, ideally it'd be nice if those elements stuck to the top of the screen,
+   right now it's only on top of the other elements (word and keyboard), so a tall screen just has alot of empty space at the top of the screen.
+
