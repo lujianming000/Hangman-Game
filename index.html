@@ -1,15 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>WIP Web Final</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
 
-    <body>
-        <h1>Hi There</h1>
-        <div id="container"></div>
-        <script src="js/script.js"></script>
-    </body>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WIP Web Final</title>
+
+    <!------------------------>
+    <!--      CSS Style     -->
+    <!------------------------>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!----------------------->
+    <!--    HTML Section   -->
+    <!----------------------->
+    <div id="wrapper">
+        <h2 id="lives"></h2>
+        <div id="containerHangman">
+            <img id="hangman">
+        </div>
+        <div id="containerWord">
+            <h1 id="word"></h1>
+        </div>
+        <div id="containerAlphabet"></div>
+    </div>
+    <div id="endscreen">
+        <img id="endpic">
+        <div id="scorediv">
+            <p id="score"></p>
+            <button id="viewleaderboard">View Leaderboards</button>
+        </div>
+        
+    </div>
+    <div id="leaderboards">
+        <table id="leaderstable"></table>
+        <br>
+        <p>Your Name</p>
+        <br>
+        <input type="text" id="userscore">
+        <input type="button" id="submitscore" value="Submit">
+        <button id="rebutton">Play Again</button>
+    </div>
+    <audio id="coin">
+        <source src="audio/coin.wav" type="audio/mpeg">
+    </audio>
+    <audio id="dead">
+        <source src="audio/dead.wav" type="audio/mpeg">
+    </audio>
+</body>
+
+<!----------------------->
+<!--      JS FILES     -->
+<!----------------------->
+<script src="js/button.js"></script>
+<script src="js/word.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
+<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+<script src="js/firbaseapi.js"></script>
+<script src="js/leaderboards.js"></script>
+<!-- Note: ALWAYS LEAVE gamelogic.js AT BOTTOM-MOST LINE! 
+          --       gamelogic.js depends on scripts from button.js
+          --       and word.js, so gamelogic.js cannot be read
+          --       until the other files are read.                -->
+<script src="js/gamelogic.js"></script>
+
 </html>
