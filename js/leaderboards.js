@@ -24,7 +24,7 @@ db.collection("scores").onSnapshot(function (snapshot) {
 })
 
 function submitScore(){
-    let userScore = {User: document.getElementById("userscore").value, Score: 150};
+    let userScore = {User: document.getElementById("userscore").value, Score: score};
     if (userScore.Score > highScores[9].Score){
         for(let i = 0; i < 10; i++){
             if(userScore.Score > highScores[i].Score){
