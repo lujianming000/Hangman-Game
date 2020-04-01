@@ -5,8 +5,10 @@ let hangman = document.getElementById("hangman");
 let containerAlphabet = document.getElementById("containerAlphabet");
 let wrapperGame = document.getElementById("wrapper");
 let wrapperEnd = document.getElementById("endscreen");
+let wrapperLeaderBoards = document.getElementById("leaderboards");
 let endpic = document.getElementById("endpic");
 let restartButton = document.getElementById("rebutton");
+let leaderboadsButton = document.getElementById("viewleaderboard");
 let coin = document.getElementById("coin");
 let dead = document.getElementById("dead");
 
@@ -152,6 +154,7 @@ function win() {
     wrapperGame.style.visibility = "hidden";
     wrapperEnd.style.visibility = "visible";
     restartButton.onclick = restart;
+    leaderboadsButton.onclick = showLeaderboard;
 }
 
 /**
@@ -162,7 +165,9 @@ function gameOver() {
     finalScoreLabel.innerHTML = "Your score is: " + score;
     wrapperGame.style.visibility = "hidden";
     wrapperEnd.style.visibility = "visible";
+
     restartButton.onclick = restart;
+    leaderboadsButton.onclick = showLeaderboard;
 }
 
 /**
@@ -171,7 +176,16 @@ function gameOver() {
 function restart() {
     createGameState();
     wrapperGame.style.visibility = "visible";
+    wrapperLeaderBoards.style.visibility = "hidden";
     wrapperEnd.style.visibility = "hidden";
+}
+
+function showLeaderboard(){
+    wrapperEnd.style.visibility = "hidden";
+    wrapperLeaderBoards.style.visibility = "visible";
+    document.getElementById("submitscore").onclick = submitScore;
+
+    //restartButton.onclick = restart;
 }
 
 // invoke

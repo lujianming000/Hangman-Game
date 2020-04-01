@@ -136,3 +136,21 @@ h1 {
 	color: white;
 	font-family: Arial, Helvetica, sans-serif;
 }
+
+#viewleaderboard{
+	width: 10vmax;
+	height: 5vh;
+	top: 80vh;
+	border-radius: 35px;
+	font-size: 0.5em;
+	text-align: center;
+	position: fixed;
+	background-color: #ED553B;
+	border-color: #ED552A;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#leaderboards{
+	visibility: hidden;
+}
