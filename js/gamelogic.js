@@ -180,7 +180,11 @@ function restart() {
     wrapperEnd.style.visibility = "hidden";
 }
 
+/**
+ * view leaderboard page.
+ */
 function showLeaderboard(){
+    scoresubmitted = false;
     wrapperEnd.style.visibility = "hidden";
     wrapperLeaderBoards.style.visibility = "visible";
     document.getElementById("submitscore").onclick = submitScore;
