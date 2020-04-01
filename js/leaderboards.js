@@ -1,3 +1,4 @@
+// variables
 let highScores = [];
 let scoresubmitted = false;
 

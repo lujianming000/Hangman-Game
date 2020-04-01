@@ -1,30 +1,24 @@
 FROM JASON:
-
 I worked on button.js, word.js, and gamelogic.js. Please take a look through that.
 Also take a look through style.css/.buttons and word.js/getRandomWord() to see they were scaled to fit browser.
 When we're working on the other stuff elements, I want to retain the same methods for scaling fonts, buttons, and pictures.
 
-
-The mechanics of the game should be working now, there isn't that much left to do:
-
+The mechanics of the game should be working now, there isn't that much left to do
+What to do next:
     1. finish gamelogic.js (look for // TODOs)
        - updateHangman()  -> I already made a switch case based on lives (D2L says to have 7 lives)
                           -> update src for the hangman img HTML element
-       - calculateScore() -> I was thinking some kind of setInterval function where score decreases
-                          -> at the end of the game, lives should somehow add back to the score
+       - calculateScore() -> follow D2l instructions
        - gameOver()       -> some kind of game over screen (and maybe play again?)
-                          -> see final score and see correct word
+                          -> see final score
        - win()            -> some kind of win screen (and maybe play again?)
                           -> leaderboards
-
-    2. add some kind of leaderboards (firebase?)
-       - i'll let you guys think about that
+    2. database/leaderboards
 
 From JIMMY:
+ALL The stuff JASON has mentioned is done except the database/leaderboards.
 
-ALL The stuff JASON mentioned have has done except the database (leaderboards).
-
-What to do next
+What to do next:
 1. css Mobile friendy design (required)
       (NOTE FROM JASON: I had already made word, keyboard and lives label mobile friendly)
 2. leaderboards (bonus)
@@ -35,10 +29,12 @@ Mobile friendly design has been done!
 FROM SAM:
 finished leaderboards
 
-
 What to do next:
  - Add styling to leaderboards, 
-      make sure 'play again' and 'view leaderboards' button scales to the size of the screen (text looks pretty small right now)
+      make sure 'play again' and 'view leaderboards' button scales to the size of the screen (text looks pretty small right now.
+ - verify that everything has comments (functions) and is visually organized
  - gamestate elements (lives and hangman) are wrapped weirdly, ideally it'd be nice if those elements stuck to the top of the screen,
    right now it's only on top of the other elements (word and keyboard), so a tall screen just has alot of empty space at the top of the screen.
+   a wide screen (like in desktop) cuts off the lives element because the hangman is too big? lives element just goes off screen
+ - host and hand in project
 
