@@ -10,7 +10,7 @@ let words = [
     "SAMUEL",
     "JAEDON",
     "COVID",
-    "SAD",
+    "TELEPHONE",
     "APPLE",
     "BANANA",
 ];
