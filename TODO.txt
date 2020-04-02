@@ -37,4 +37,3 @@ What to do next:
    right now it's only on top of the other elements (word and keyboard), so a tall screen just has alot of empty space at the top of the screen.
    a wide screen (like in desktop) cuts off the lives element because the hangman is too big? lives element just goes off screen
  - host and hand in project
-
