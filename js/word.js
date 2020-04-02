@@ -10,11 +10,13 @@ let words = [
     "SAMUEL",
     "JAEDON",
     "COVID",
-    "SAD",
+    "TELEPHONE",
     "APPLE",
     "BANANA",
 ];
 let wordIndex;
+
+let fontSizeBase = 75;
 
 
 /**
@@ -38,7 +40,15 @@ function WordToFind() {
         wordIndex = Math.floor(Math.random() * words.length);
         this.word.answer = words[wordIndex];
         this.word.size = words[wordIndex].length;
-        let fontSize = 50 / this.word.size; // 50: style.width from <div id="containerWord">
+
+        let screenWidthMultiplier = 1;
+        if (window.innerWidth >= 1200){
+            screenWidthMultiplier = 0.5;
+        } else if (window.innerWidth >= 768) {
+            screenWidthMultiplier = 0.75;
+        }
+
+        let fontSize = (fontSizeBase * screenWidthMultiplier) / this.word.size; // 50: style.width from <div id="containerWord">
         this.word.style.fontSize = fontSize + "vw";
     }
 

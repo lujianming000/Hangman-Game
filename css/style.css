@@ -1,7 +1,17 @@
+/* ---------------------------
+--		MOBILE STYLES		--
+----------------------------*/
+
+body {
+	overflow-y:hidden;
+}
+
 /** div container to hold game-state elements. */
 #wrapper {
-	position: absolute;
-	bottom: max(4vw, 4vh, 30px);
+	margin:auto;
+	display:flex;
+	flex-flow:column;
+	align-content:center;
 }
 
 /** Lives label. */
@@ -23,21 +33,21 @@ h2 {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	height: 40vmin;
+	height: 25vh;
 }
 
 /** div container for word. */
 #containerWord {
-	width: 50%;
+	width: 95%;
 	margin: auto;
 	position: relative;
 }
 
 /** Word Label. */
-h1 {
+#word {
 	text-align: center;
 	font-family: Arial;
-	text-shadow: 0.025em 0.025em red;
+	text-shadow: 0.025em 0.025em #1e62d0;
 	margin-top: 0px;
 	margin-bottom: max(4vw, 4vh, 30px);
 	/* font-size will change based on length of word -> word.js/getRandomWord() */
@@ -45,7 +55,7 @@ h1 {
 
 /** div container for alphabet letters. */
 #containerAlphabet {
-	width: 90%;
+	width: 95%;
 	margin: auto;
 	position: relative;
 	display: flex;
@@ -57,9 +67,9 @@ h1 {
 
 /** Alphabet letter buttons. */
 .buttons {
-	width: max(8.6vw, 28px);
-	height: max(6vh, 38px);
-	margin: 0.4vh 0.4vw;
+	width: 10vw;
+	height: 5vh;
+	margin: 0.25vh 0.25vw;
 	box-shadow: inset 0px 1px 0px 0px #97c4fe;
 	background: linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
 	border-radius: max(0.8vw, 0.8vh, 8px);
@@ -153,4 +163,35 @@ h1 {
 
 #leaderboards{
 	visibility: hidden;
+	display:flex;
+	flex-flow:column;
+}
+
+/* ---------------------------
+--		TABLET STYLES		--
+----------------------------*/
+@media screen and (min-width:768px) {
+	#hangman {
+		height:30vh;
+	}
+
+	.buttons {
+		width:12vw;
+	}
+}
+
+
+/* ---------------------------
+--		DESKTOP STYLES		--
+----------------------------*/
+@media screen and (min-width:1200px) {
+
+	#containerAlphabet {
+		width:95vw;
+	}
+
+	.buttons {
+		width:10vw;
+		height:8vh;
+	}
 }
