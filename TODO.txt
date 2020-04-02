@@ -36,9 +36,6 @@ What to do next:
  - gamestate elements (lives and hangman) are wrapped weirdly, ideally it'd be nice if those elements stuck to the top of the screen,
    right now it's only on top of the other elements (word and keyboard), so a tall screen just has alot of empty space at the top of the screen.
    a wide screen (like in desktop) cuts off the lives element because the hangman is too big? lives element just goes off screen
-<<<<<<< HEAD
- - host and hand in project
-=======
  - host and hand in project
 
 From JAEDON:
@@ -47,4 +44,3 @@ Made the page more mobile-friendly with media queries (I think Amir's going over
 What to do next:
 - Add styling to leaderboards.
 
->>>>>>> 625f5506249df264637b04cbc756213898c74622
