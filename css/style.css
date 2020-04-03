@@ -116,9 +116,7 @@ h2 {
 	display:none;
 	width: 90vw;
 	height: 70vh;
-	/* top: -2vh; */
 	margin: auto;
-	/* left: 5vw; */
 	position: relative;
 }
 
@@ -128,6 +126,7 @@ h2 {
 	width: 50%;
 	margin: auto;
 	position: relative;
+	top: 2vh;
 	flex-flow: column;
 	justify-content: center;
 }
