@@ -49,15 +49,14 @@ h2 {
 #word {
 	text-align: center;
 	text-shadow: 0.025em 0.025em #1e62d0;
-	margin-top: 0px;
-	margin-bottom: max(4vw, 4vh, 30px);
+	margin:0 auto;
 	/* font-size will change based on length of word -> word.js/getRandomWord() */
 }
 
 /** div container for alphabet letters. */
 #containerAlphabet {
 	width: 95%;
-	margin: auto;
+	margin: 5vh auto;
 	position: relative;
 	display: flex;
 	flex-flow: row wrap;

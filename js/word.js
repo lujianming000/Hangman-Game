@@ -14,6 +14,7 @@ let words = [
 let wordIndex;
 
 let fontSizeBase = 75;
+let fontSizeMax = 20;
 
 
 /**
@@ -46,6 +47,10 @@ function WordToFind() {
         }
 
         let fontSize = (fontSizeBase * screenWidthMultiplier) / this.word.size; // 50: style.width from <div id="containerWord">
+        if (fontSize >= fontSizeMax) {
+            fontSize = fontSizeMax;
+        }
+        
         this.word.style.fontSize = fontSize + "vw";
     }
 
