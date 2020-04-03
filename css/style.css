@@ -116,8 +116,8 @@ h2 {
 	display: flex;
 	width: 50%;
 	height: 10%;
-	top: 70%;
-	position: relative;
+	top: 80%;
+	position: fixed;
 	left: 25%;
 	display: flex;
 	flex-flow:column;
