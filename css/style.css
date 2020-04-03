@@ -4,7 +4,7 @@
 
 
 body {
-	overflow-y:hidden;
+	overflow-y:auto;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -67,8 +67,8 @@ h2 {
 
 /** Alphabet letter buttons. */
 .buttons {
-	width: 10vw;
-	height: 5vh;
+	width: max(9vw, 31px);
+	height: max(5vh, 31px);
 	margin: 0.25vh 0.25vw;
 	box-shadow: inset 0px 1px 0px 0px #97c4fe;
 	background: linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
@@ -198,7 +198,7 @@ td {
 	}
 
 	.buttons {
-		width:12vw;
+		width:max(9vw, 75px);
 	}
 
 	#score {
