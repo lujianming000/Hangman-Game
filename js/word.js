@@ -3,18 +3,17 @@ let container = document.getElementById("word");
 
 // variable declarations
 let words = [
-    "HELLO",
-    "WORLD",
-    "JIMMY",
-    "JASON",
-    "SAMUEL",
-    "JAEDON",
-    "COVID",
-    "SAD",
-    "APPLE",
-    "BANANA",
+    "HELLO", "WORLD", "JIMMY", "JASON", "SAMUEL", "JAEDON", "COVID",
+    "TELEPHONE", "APPLE", "BANANA", "TATTOO", "ELECTRICITY", "HANGMAN",
+    "DEVELOPMENT", "COMMENT", "MUSIC", "THEATER", "GAMING", "REPAIR",
+    "COLLABORATE", "ZEBRA", "XYLOPHONE", "YETI", "HOUND", "QUEEN",
+    "TWITTER", "EMOJI", "PROGRAMMING", "SAFE", "RACCOON", "BEACH",
+    "VIDEO", "BOOK", "LIBRARY", "CREDIT", "TRAIN", "VIRUS",
+    "QUARANTINE", "WASHING", "INSIDE", "OUTSIDE", "RABBIT"
 ];
 let wordIndex;
+
+let fontSizeBase = 75;
 
 
 /**
@@ -38,7 +37,15 @@ function WordToFind() {
         wordIndex = Math.floor(Math.random() * words.length);
         this.word.answer = words[wordIndex];
         this.word.size = words[wordIndex].length;
-        let fontSize = 50 / this.word.size; // 50: style.width from <div id="containerWord">
+
+        let screenWidthMultiplier = 1;
+        if (window.innerWidth >= 1200){
+            screenWidthMultiplier = 0.5;
+        } else if (window.innerWidth >= 768) {
+            screenWidthMultiplier = 0.75;
+        }
+
+        let fontSize = (fontSizeBase * screenWidthMultiplier) / this.word.size; // 50: style.width from <div id="containerWord">
         this.word.style.fontSize = fontSize + "vw";
     }
 

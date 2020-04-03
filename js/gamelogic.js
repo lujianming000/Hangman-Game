@@ -150,9 +150,10 @@ function updateHangman() {
  */
 function win() {
     endpic.src = "img/congra.jpg";
+    endpic.style.display = "block";
     finalScoreLabel.innerHTML = "Your score is: " + score;
-    wrapperGame.style.visibility = "hidden";
-    wrapperEnd.style.visibility = "visible";
+    wrapperGame.style.display = "none";
+    wrapperEnd.style.display = "block";
     restartButton.onclick = restart;
     leaderboadsButton.onclick = showLeaderboard;
 }
@@ -162,9 +163,10 @@ function win() {
  */
 function gameOver() {
     endpic.src = "img/gameover.jpg";
+    endpic.style.display = "block";
     finalScoreLabel.innerHTML = "Your score is: " + score;
-    wrapperGame.style.visibility = "hidden";
-    wrapperEnd.style.visibility = "visible";
+    wrapperGame.style.display = "none";
+    wrapperEnd.style.display = "block";
 
     restartButton.onclick = restart;
     leaderboadsButton.onclick = showLeaderboard;
@@ -175,9 +177,10 @@ function gameOver() {
  */
 function restart() {
     createGameState();
-    wrapperGame.style.visibility = "visible";
-    wrapperLeaderBoards.style.visibility = "hidden";
-    wrapperEnd.style.visibility = "hidden";
+    wrapperGame.style.display = "flex";
+    wrapperLeaderBoards.style.display = "none";
+    wrapperEnd.style.display = "none";
+    endpic.style.display = "none";
 }
 
 /**
@@ -185,12 +188,30 @@ function restart() {
  */
 function showLeaderboard(){
     scoresubmitted = false;
-    wrapperEnd.style.visibility = "hidden";
-    wrapperLeaderBoards.style.visibility = "visible";
+    wrapperEnd.style.display = "none";
+    endpic.style.display = "none";
+    wrapperLeaderBoards.style.display = "flex";
     document.getElementById("submitscore").onclick = submitScore;
 
     //restartButton.onclick = restart;
 }
 
+/**
+ * Resizes the word based on screen size.
+ */
+function wordResize() {
+    let fontSizeBase = 75;
+
+    let screenWidthMultiplier = 1;
+    if (window.innerWidth >= 1200){
+        screenWidthMultiplier = 0.5;
+    } else if (window.innerWidth >= 768) {
+        screenWidthMultiplier = 0.75;
+    }
+    let fontSize = (fontSizeBase * screenWidthMultiplier) / word.word.size;
+    word.word.style.fontSize = fontSize + "vw";
+}
+
 // invoke
 createGameState();
+window.onresize = wordResize;

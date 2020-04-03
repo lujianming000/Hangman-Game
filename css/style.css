@@ -1,13 +1,25 @@
+/* ---------------------------
+--		MOBILE STYLES		--
+----------------------------*/
+
+
+body {
+	overflow-y:hidden;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
 /** div container to hold game-state elements. */
 #wrapper {
-	position: absolute;
-	bottom: max(4vw, 4vh, 30px);
+	margin:auto;
+	display:flex;
+	flex-flow:column;
+	align-content:center;
 }
 
 /** Lives label. */
 h2 {
 	text-align: center;
-	font-family: Arial;
 	font-size: max(4vh, 2em, 2rem);
 	text-shadow: 0.045em 0.045em #AAAAAA;
 }
@@ -23,21 +35,20 @@ h2 {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	height: 40vmin;
+	height: 25vh;
 }
 
 /** div container for word. */
 #containerWord {
-	width: 50%;
+	width: 95%;
 	margin: auto;
 	position: relative;
 }
 
 /** Word Label. */
-h1 {
+#word {
 	text-align: center;
-	font-family: Arial;
-	text-shadow: 0.025em 0.025em red;
+	text-shadow: 0.025em 0.025em #1e62d0;
 	margin-top: 0px;
 	margin-bottom: max(4vw, 4vh, 30px);
 	/* font-size will change based on length of word -> word.js/getRandomWord() */
@@ -45,7 +56,7 @@ h1 {
 
 /** div container for alphabet letters. */
 #containerAlphabet {
-	width: 90%;
+	width: 95%;
 	margin: auto;
 	position: relative;
 	display: flex;
@@ -57,15 +68,14 @@ h1 {
 
 /** Alphabet letter buttons. */
 .buttons {
-	width: max(8.6vw, 28px);
-	height: max(6vh, 38px);
-	margin: 0.4vh 0.4vw;
+	width: 10vw;
+	height: 5vh;
+	margin: 0.25vh 0.25vw;
 	box-shadow: inset 0px 1px 0px 0px #97c4fe;
 	background: linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
 	border-radius: max(0.8vw, 0.8vh, 8px);
 	border: 1px solid #337fed;
 	color: #ffffff;
-	font-family: Arial;
 	font-size: 1.3em;
 	font-weight: bold;
 	text-shadow: 0px 1px 0px #1570cd;
@@ -88,18 +98,17 @@ h1 {
 
 /** div container for endscreen. */
 #endscreen {
-	visibility: hidden;
+	display:none;
 }
 
 /** Endscreen picture - win or lose screen. */
 #endpic {
+	display:none;
 	width: 90vw;
 	height: 70vh;
 	top: 2vh;
 	left: 5vw;
-	position: fixed;
-	z-index: +1;
-
+	position: relative;
 }
 
 /** div container for final score label. */
@@ -107,50 +116,113 @@ h1 {
 	display: flex;
 	width: 50%;
 	height: 10%;
-	top: 70%;
+	top: 80%;
 	position: fixed;
 	left: 25%;
 	display: flex;
+	flex-flow:column;
 	justify-content: center;
 }
 
 /** final score label. */
 #score {
-	font-family: Arial;
 	font-weight: bold;
+	font-size: 5vw;
+	margin:auto;
+}
+
+.redButton {
+	height: 5vh;
+	border-radius: 35px;
 	font-size: 1em;
-	margin: auto;
-}
-
-/** Restart button. */
-#rebutton {
-	width: 10vmax;
-	height: 5vh;
-	top: 80vh;
-	border-radius: 35px;
-	font-size: 0.5em;
 	text-align: center;
-	position: fixed;
+	position: relative;
+	margin:3em auto auto auto;
 	background-color: #ED553B;
 	border-color: #ED552A;
 	color: white;
-	font-family: Arial, Helvetica, sans-serif;
-}
-
-#viewleaderboard{
-	width: 10vmax;
-	height: 5vh;
-	top: 80vh;
-	border-radius: 35px;
-	font-size: 0.5em;
-	text-align: center;
-	position: fixed;
-	background-color: #ED553B;
-	border-color: #ED552A;
-	color: white;
-	font-family: Arial, Helvetica, sans-serif;
 }
 
 #leaderboards{
-	visibility: hidden;
+	display:none;
+	flex-flow:column;
+	width:50vw;
+	margin:10vh auto auto auto;
+}
+
+#leaderstable{
+	top:10vh;
+	height:20vh;
+	text-align:center;
+	margin:auto;
+}
+
+#leaderSubmit {
+	width:50vw;
+	margin:5em auto auto auto;
+	display:flex;
+	flex-flow:column;
+}
+
+#submitName {
+	margin:0 auto 1em auto;
+}
+
+#scoreDiv {
+	display:flex;
+	flex-flow:column;
+}
+
+th {
+	font-size:2.5em;
+}
+
+td {
+	font-size:1.5em;
+	width:10vw;
+}
+
+.cellUser {
+	font-weight:bold;
+}
+
+.cellScore {
+	font-style:italic;
+}
+
+/* ---------------------------
+--		TABLET STYLES		--
+----------------------------*/
+@media screen and (min-width:768px) {
+	#hangman {
+		height:30vh;
+	}
+
+	.buttons {
+		width:12vw;
+	}
+
+	#score {
+		font-size:3vw;
+	}
+}
+
+
+/* ---------------------------
+--		DESKTOP STYLES		--
+----------------------------*/
+@media screen and (min-width:1200px) {
+
+	#containerAlphabet {
+		width:95vw;
+	}
+
+	.buttons {
+		width:10vw;
+		height:8vh;
+	}
+
+	#score {
+		font-size:2vw;
+	}
 }

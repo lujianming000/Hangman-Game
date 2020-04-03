@@ -8,7 +8,7 @@ let scoresubmitted = false;
 function createLeaderboards() {
     let table = "<tr><th>User</th><th>Score</th></tr>"
     for (let i = 0; i < 10; i++) {
-        table += "<tr><td>" + highScores[i].User + "</td><td>" + highScores[i].Score + "</td></tr>";
+        table += "<tr><td class=\"cellUser\">" + highScores[i].User + "</td><td class=\"cellScore\">" + highScores[i].Score + "</td></tr>";
     }
     document.getElementById("leaderstable").innerHTML = table;
 }
