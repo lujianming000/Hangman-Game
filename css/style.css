@@ -2,6 +2,7 @@
 --		MOBILE STYLES		--
 ----------------------------*/
 
+/** browser. */
 html, body {
 	height: 100%;
 	margin: 0;
@@ -10,7 +11,7 @@ html, body {
 }
 
 /** div container to hold game-state elements. */
-#wrapper {
+#wrapper, #endscreen, #leaderboards {
 	height: 100%;
 	margin:auto;
 	display:flex;
@@ -26,6 +27,7 @@ h2 {
 	margin: 2vh auto;
 }
 
+/** div container for Hangman image. */
 #containerHangman {
 	width: 75%;
 	margin: auto;
@@ -61,7 +63,6 @@ h2 {
 	margin: auto;
 	position: auto;
 }
-
 
 /** div container for alphabet letters. */
 #containerAlphabet {
@@ -124,12 +125,9 @@ h2 {
 #scorediv {
 	display: flex;
 	width: 50%;
-	height: 10%;
-	top: 80%;
-	position: fixed;
-	left: 25%;
-	display: flex;
-	flex-flow:column;
+	margin: auto;
+	position: relative;
+	flex-flow: column;
 	justify-content: center;
 }
 
@@ -140,25 +138,26 @@ h2 {
 	margin:auto;
 }
 
+/** red buttons for 'view leaderboards' and 'play again'. */
 .redButton {
-	height: 5vh;
-	border-radius: 35px;
-	font-size: 1em;
+	height: max(5vh, 50px);
+	box-shadow: inset 0px 1px 0px 0px #ED663B;
+	border-radius: max(1.5vw, 1.5vh, 15px);
+	font-size: 1.3em;
 	text-align: center;
 	position: relative;
-	margin:3em auto auto auto;
-	background-color: #ED553B;
-	border-color: #ED552A;
-	color: white;
+	margin: 1.3em auto auto;
+	background: linear-gradient(to bottom, #ED553B 5%, #af3e2a 100%);
+	border: 1px solid #d44c26;
+	color: #ffffff;
 }
 
+/** div container for leaderboards. */
 #leaderboards{
 	display:none;
-	flex-flow:column;
-	width:50vw;
-	margin:10vh auto auto auto;
 }
 
+/** leaderboards table. */
 #leaderstable{
 	top:10vh;
 	height:20vh;
@@ -166,6 +165,7 @@ h2 {
 	margin:auto;
 }
 
+/** leaderboards submit button. */
 #leaderSubmit {
 	width:50vw;
 	margin:5vh auto auto auto;
@@ -173,28 +173,28 @@ h2 {
 	flex-flow:column;
 }
 
+/** leaderboards name text area. */
 #submitName {
 	margin:0 auto 5vh auto;
 }
 
-#scoreDiv {
-	display:flex;
-	flex-flow:column;
-}
-
+/** leaderboards table header. */
 th {
 	font-size:5vh;
 }
 
+/** leaderboards table cells. */
 td {
 	font-size:3vh;
 	width:10vw;
 }
 
+/** first column style for leaderboards table. */
 .cellUser {
 	font-weight:bold;
 }
 
+/** second column style for leaderboards table. */
 .cellScore {
 	font-style:italic;
 }
@@ -203,6 +203,7 @@ td {
 --		TABLET STYLES		--
 ----------------------------*/
 @media screen and (min-width:768px) {
+	
 	#hangman {
 		height:30vh;
 	}
@@ -215,7 +216,6 @@ td {
 		font-size:3vw;
 	}
 }
-
 
 /* ---------------------------
 --		DESKTOP STYLES		--

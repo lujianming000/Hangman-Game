@@ -194,8 +194,6 @@ function showLeaderboard(){
     endpic.style.display = "none";
     wrapperLeaderBoards.style.display = "flex";
     document.getElementById("submitscore").onclick = submitScore;
-
-    //restartButton.onclick = restart;
 }
 
 /**

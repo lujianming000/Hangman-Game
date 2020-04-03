@@ -2,6 +2,10 @@
 let container = document.getElementById("word");
 let definition = document.getElementById("wordDefinition");
 
+// constants
+const FONT_SIZE_BASE = 75;
+const FONT_SIZE_MAX = 20;
+
 // variable declarations
 let words = [
     ['HELLO', 'used to express a greeting, answer a telephone, or attract attention.'],
@@ -32,7 +36,7 @@ let words = [
     ['RACCOON', 'a grayish-brown mammal that has a foxlike face with a black mask and a ringed tail.'],
     ['BEACH', 'a pebbly or sandy shore, usually by the ocean.'],
     ['VIDEO', 'the recording, reproducing, or broadcasting of moving visual images.'],
-    ['BOOK', 'a long writtenor printed work of fiction or nonfiction on sheets of paper.'],
+    ['BOOK', 'a long written or printed work of fiction or nonfiction on sheets of paper.'],
     ['LIBRARY', 'a building or room containing collections of books.'],
     ['CREDIT', 'the ability of a customer to obtain goods or services before payment.'],
     ['TRAIN', 'a series of railroad cars moved as a unit by a locomotive or by integral motors.'],
@@ -40,22 +44,9 @@ let words = [
     ['WASHING', 'clean with water and, typically, soap or detergent.'],
     ['RABBIT', 'a small plant-eating mammal with long ears, long hind legs, and a short tail.']
 ];
-// let words = [
-//     ['HELLO', 'used to express a greeting, answer a telephone, or attract attention.'],
-//     "HELLO", "WORLD", "JIMMY", "JASON", "SAMUEL", "JAEDON", "COVID",
-//     "TELEPHONE", "APPLE", "BANANA", "TATTOO", "ELECTRICITY", "HANGMAN",
-//     "DEVELOPMENT", "COMMENT", "MUSIC", "THEATER", "GAMING", "REPAIR",
-//     "COLLABORATE", "ZEBRA", "XYLOPHONE", "YETI", "HOUND", "QUEEN",
-//     "TWITTER", "EMOJI", "PROGRAMMING", "SAFE", "RACCOON", "BEACH",
-//     "VIDEO", "BOOK", "LIBRARY", "CREDIT", "TRAIN", "VIRUS",
-//     "QUARANTINE", "WASHING", "INSIDE", "OUTSIDE", "RABBIT"
-// ];
 let wordIndex;
 
-let wordHint;
-
-let fontSizeBase = 75;
-let fontSizeMax = 20;
+let fontSize;
 
 
 /**
@@ -90,9 +81,9 @@ function WordToFind() {
             screenWidthMultiplier = 0.75;
         }
 
-        let fontSize = (fontSizeBase * screenWidthMultiplier) / this.word.size; // 50: style.width from <div id="containerWord">
-        if (fontSize >= fontSizeMax) {
-            fontSize = fontSizeMax;
+        fontSize = (FONT_SIZE_BASE * screenWidthMultiplier) / this.word.size; // 50: style.width from <div id="containerWord">
+        if (fontSize >= FONT_SIZE_MAX) {
+            fontSize = FONT_SIZE_MAX;
         }
         
         this.word.style.fontSize = fontSize + "vw";
