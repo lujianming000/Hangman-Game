@@ -2,11 +2,12 @@
 --		MOBILE STYLES		--
 ----------------------------*/
 
-/*
+
 body {
 	overflow-y:hidden;
+	font-family: Arial, Helvetica, sans-serif;
 }
-*/
+
 
 /** div container to hold game-state elements. */
 #wrapper {
@@ -19,7 +20,6 @@ body {
 /** Lives label. */
 h2 {
 	text-align: center;
-	font-family: Arial;
 	font-size: max(4vh, 2em, 2rem);
 	text-shadow: 0.045em 0.045em #AAAAAA;
 }
@@ -48,7 +48,6 @@ h2 {
 /** Word Label. */
 #word {
 	text-align: center;
-	font-family: Arial;
 	text-shadow: 0.025em 0.025em #1e62d0;
 	margin-top: 0px;
 	margin-bottom: max(4vw, 4vh, 30px);
@@ -77,7 +76,6 @@ h2 {
 	border-radius: max(0.8vw, 0.8vh, 8px);
 	border: 1px solid #337fed;
 	color: #ffffff;
-	font-family: Arial;
 	font-size: 1.3em;
 	font-weight: bold;
 	text-shadow: 0px 1px 0px #1570cd;
@@ -105,13 +103,12 @@ h2 {
 
 /** Endscreen picture - win or lose screen. */
 #endpic {
+	display:none;
 	width: 90vw;
 	height: 70vh;
 	top: 2vh;
 	left: 5vw;
-	position: fixed;
-	z-index: +1;
-
+	position: relative;
 }
 
 /** div container for final score label. */
@@ -120,54 +117,37 @@ h2 {
 	width: 50%;
 	height: 10%;
 	top: 70%;
-	position: fixed;
+	position: relative;
 	left: 25%;
 	display: flex;
+	flex-flow:column;
 	justify-content: center;
 }
 
 /** final score label. */
 #score {
-	font-family: Arial;
 	font-weight: bold;
+	font-size: 5vw;
+	margin:auto;
+}
+
+.redButton {
+	height: 5vh;
+	border-radius: 35px;
 	font-size: 1em;
-	margin: auto;
-}
-
-/** Restart button. */
-#rebutton {
-	width: 10vmax;
-	height: 5vh;
-	top: 80vh;
-	border-radius: 35px;
-	font-size: 0.5em;
 	text-align: center;
-	position: fixed;
+	position: relative;
+	margin:3em auto auto auto;
 	background-color: #ED553B;
 	border-color: #ED552A;
 	color: white;
-	font-family: Arial, Helvetica, sans-serif;
-}
-
-#viewleaderboard{
-	width: 10vmax;
-	height: 5vh;
-	top: 80vh;
-	border-radius: 35px;
-	font-size: 0.5em;
-	text-align: center;
-	position: fixed;
-	background-color: #ED553B;
-	border-color: #ED552A;
-	color: white;
-	font-family: Arial, Helvetica, sans-serif;
 }
 
 #leaderboards{
 	display:none;
 	flex-flow:column;
 	width:50vw;
-	margin:auto;
+	margin:10vh auto auto auto;
 }
 
 #leaderstable{
@@ -179,18 +159,18 @@ h2 {
 
 #leaderSubmit {
 	width:50vw;
-	margin:auto;
+	margin:5em auto auto auto;
 	display:flex;
 	flex-flow:column;
 }
 
-#rebutton {
-	position:relative;
-	margin:auto;
-}
-
 #submitName {
 	margin:0 auto 1em auto;
+}
+
+#scoreDiv {
+	display:flex;
+	flex-flow:column;
 }
 
 th {
@@ -221,6 +201,10 @@ td {
 	.buttons {
 		width:12vw;
 	}
+
+	#score {
+		font-size:3vw;
+	}
 }
 
 
@@ -236,5 +220,9 @@ td {
 	.buttons {
 		width:10vw;
 		height:8vh;
+	}
+
+	#score {
+		font-size:2vw;
 	}
 }

@@ -150,6 +150,7 @@ function updateHangman() {
  */
 function win() {
     endpic.src = "img/congra.jpg";
+    endpic.style.display = "block";
     finalScoreLabel.innerHTML = "Your score is: " + score;
     wrapperGame.style.display = "none";
     wrapperEnd.style.display = "block";
@@ -162,6 +163,7 @@ function win() {
  */
 function gameOver() {
     endpic.src = "img/gameover.jpg";
+    endpic.style.display = "block";
     finalScoreLabel.innerHTML = "Your score is: " + score;
     wrapperGame.style.display = "none";
     wrapperEnd.style.display = "block";
@@ -178,6 +180,7 @@ function restart() {
     wrapperGame.style.display = "flex";
     wrapperLeaderBoards.style.display = "none";
     wrapperEnd.style.display = "none";
+    endpic.style.display = "none";
 }
 
 /**
@@ -186,6 +189,7 @@ function restart() {
 function showLeaderboard(){
     scoresubmitted = false;
     wrapperEnd.style.display = "none";
+    endpic.style.display = "none";
     wrapperLeaderBoards.style.display = "flex";
     document.getElementById("submitscore").onclick = submitScore;
 
