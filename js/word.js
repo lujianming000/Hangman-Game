@@ -3,16 +3,13 @@ let container = document.getElementById("word");
 
 // variable declarations
 let words = [
-    "HELLO",
-    "WORLD",
-    "JIMMY",
-    "JASON",
-    "SAMUEL",
-    "JAEDON",
-    "COVID",
-    "TELEPHONE",
-    "APPLE",
-    "BANANA",
+    "HELLO", "WORLD", "JIMMY", "JASON", "SAMUEL", "JAEDON", "COVID",
+    "TELEPHONE", "APPLE", "BANANA", "TATTOO", "ELECTRICITY", "HANGMAN",
+    "DEVELOPMENT", "COMMENT", "MUSIC", "THEATER", "GAMING", "REPAIR",
+    "COLLABORATE", "ZEBRA", "XYLOPHONE", "YETI", "HOUND", "QUEEN",
+    "TWITTER", "EMOJI", "PROGRAMMING", "SAFE", "THE", "RACCOON", "BEACH",
+    "VIDEO", "BOOK", "LIBRARY", "CREDIT", "BUS", "TRAIN", "VIRUS",
+    "QUARANTINE", "WASHING", "INSIDE", "OUTSIDE", "RABBIT"
 ];
 let wordIndex;
 
