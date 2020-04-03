@@ -40,6 +40,8 @@ What to do next:
 
 From JAEDON:
 Made the page more mobile-friendly with media queries (I think Amir's going over them in the next lecture)
+Worked on styling the leaderboards
+Switched the visible/hidden code to display:none/display:block so that they don't mess with the spacing of the page.
 
 What to do next:
 - Add styling to leaderboards.

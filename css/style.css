@@ -2,9 +2,11 @@
 --		MOBILE STYLES		--
 ----------------------------*/
 
+/*
 body {
 	overflow-y:hidden;
 }
+*/
 
 /** div container to hold game-state elements. */
 #wrapper {
@@ -98,7 +100,7 @@ h2 {
 
 /** div container for endscreen. */
 #endscreen {
-	visibility: hidden;
+	display:none;
 }
 
 /** Endscreen picture - win or lose screen. */
@@ -162,9 +164,50 @@ h2 {
 }
 
 #leaderboards{
-	visibility: hidden;
+	display:none;
+	flex-flow:column;
+	width:50vw;
+	margin:auto;
+}
+
+#leaderstable{
+	top:10vh;
+	height:20vh;
+	text-align:center;
+	margin:auto;
+}
+
+#leaderSubmit {
+	width:50vw;
+	margin:auto;
 	display:flex;
 	flex-flow:column;
+}
+
+#rebutton {
+	position:relative;
+	margin:auto;
+}
+
+#submitName {
+	margin:0 auto 1em auto;
+}
+
+th {
+	font-size:2.5em;
+}
+
+td {
+	font-size:1.5em;
+	width:10vw;
+}
+
+.cellUser {
+	font-weight:bold;
+}
+
+.cellScore {
+	font-style:italic;
 }
 
 /* ---------------------------
