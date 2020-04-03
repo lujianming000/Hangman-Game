@@ -2,19 +2,20 @@
 --		MOBILE STYLES		--
 ----------------------------*/
 
-
-body {
+html, body {
+	height: 100%;
+	margin: 0;
 	overflow-y:auto;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
-
 /** div container to hold game-state elements. */
 #wrapper {
+	height: 100%;
 	margin:auto;
 	display:flex;
 	flex-flow:column;
-	align-content:center;
+	align-content:space-between;
 }
 
 /** Lives label. */
@@ -22,6 +23,7 @@ h2 {
 	text-align: center;
 	font-size: max(4vh, 2em, 2rem);
 	text-shadow: 0.045em 0.045em #AAAAAA;
+	margin: 2vh auto;
 }
 
 #containerHangman {
@@ -49,14 +51,22 @@ h2 {
 #word {
 	text-align: center;
 	text-shadow: 0.025em 0.025em #1e62d0;
-	margin:0 auto;
+	margin:0vh auto;
 	/* font-size will change based on length of word -> word.js/getRandomWord() */
 }
+
+/** div container for word definition. */
+#containerDefinition {
+	width: 95%;
+	margin: auto;
+	position: auto;
+}
+
 
 /** div container for alphabet letters. */
 #containerAlphabet {
 	width: 95%;
-	margin: 5vh auto;
+	margin: 0vh auto 3vh;
 	position: relative;
 	display: flex;
 	flex-flow: row wrap;
@@ -67,8 +77,8 @@ h2 {
 
 /** Alphabet letter buttons. */
 .buttons {
-	width: max(9vw, 31px);
-	height: max(5vh, 31px);
+	width: max(10vw, 32px);
+	height: max(5vh, 36px);
 	margin: 0.25vh 0.25vw;
 	box-shadow: inset 0px 1px 0px 0px #97c4fe;
 	background: linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
@@ -198,7 +208,7 @@ td {
 	}
 
 	.buttons {
-		width:max(9vw, 75px);
+		width:max(10vw, 75px);
 	}
 
 	#score {

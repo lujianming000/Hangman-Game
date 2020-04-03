@@ -24,9 +24,6 @@ db.collection("scores").onSnapshot(function (snapshot) {
         console.log(change);
         highScores.push(change.doc.data());
 
-
-
-
     })
     createLeaderboards();
 })
