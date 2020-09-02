@@ -1,4 +1,4 @@
-# COMP 1537 - Wheel of Fortune
+# COMP 1537 - Hangman Game
 
 Welcome to the repository for the web final.
 Updates coming soon.
